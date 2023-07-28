@@ -11,14 +11,6 @@
 </head>
 
 <style>
-    @function rgb($hexcolor) {
-        $red: red($hexcolor);
-        $green: green($hexcolor);
-        $blue: blue($hexcolor);
-        $alpha: alpha($hexcolor);
-        @return unquote("rgb(#{$red},#{$green},#{$blue})");
-    }
-
     body {
         background-color: var(--tg-theme-bg-color);
         color: var(--tg-theme-text-color);
@@ -31,6 +23,18 @@
 
     .btn-secondary {
         background-color: var(--tg-theme-secondary-bg-color);
+    }
+
+    .btn:hover,
+    .btn:focus {
+        background-color: darken(var(--tg-theme-button-color), 5%);
+        color: var(--tg-theme-button-text-color);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+        background-color: var(--tg-theme-secondary-bg-color);
+        color: var(--tg-theme-button-text-color);
     }
 
     .bubbly-button {
