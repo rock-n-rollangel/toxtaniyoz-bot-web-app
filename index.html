@@ -29,6 +29,18 @@
         --bs-modal-bg: var(--tg-theme-bg-color);
         border: none;
     }
+    .form-select {
+        background-color: var(--tg-theme-secondary-bg-color);
+        border-color: var(--tg-theme-button-color);
+        color: var(--th-theme-text-color);
+    }
+
+    .form-select:focus {
+        background-color: var(--tg-theme-secondary-bg-color);
+        border-color: var(--tg-theme-button-color);
+        box-shadow: none;
+        color: var(--th-theme-text-color);
+    }
 
     .form-control {
         background-color: var(--tg-theme-secondary-bg-color);
@@ -46,6 +58,10 @@
     .modal-header,
     .modal-footer {
         border: none;
+    }
+
+    .card {
+        --bs-card-bg: var(--tg-theme-secondary-bg-color);
     }
 
     .btn-primary {
