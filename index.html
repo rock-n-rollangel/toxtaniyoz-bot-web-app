@@ -11,30 +11,75 @@
 </head>
 
 <style>
+    :root {
+        --tg-theme-button-color: #ff0000;
+        --tg-theme-secondary-bg-color: #1d2021;
+        --tg-theme-bg-color: gray;
+        --tg-theme-button-text-color: #fff;
+        --tg-theme-hint-color: #9c9c9c;
+        --tg-theme-text-color: #fff;
+    }
+
     body {
         background-color: var(--tg-theme-bg-color);
         color: var(--tg-theme-text-color);
     }
 
-    .btn {
-        color: var(--tg-theme-button-text-color);
-        background-color: var(--tg-theme-button-color);
+    .modal {
+        --bs-modal-bg: var(--tg-theme-bg-color);
+        border: none;
+    }
+
+    .form-control {
+        background-color: var(--tg-theme-secondary-bg-color);
+        border-color: var(--tg-theme-button-color);
+        color: var(--th-theme-text-color);
+    }
+
+    .form-control:focus {
+        background-color: var(--tg-theme-secondary-bg-color);
+        border-color: var(--tg-theme-button-color);
+        box-shadow: none;
+        color: var(--th-theme-text-color);
+    }
+
+    .modal-header,
+    .modal-footer {
+        border: none;
+    }
+
+    .btn-primary {
+        --bs-btn-color: var(--tg-theme-text-color);
+        --bs-btn-bg: var(--tg-theme-button-color);
+        --bs-btn-border-color: var(--tg-theme-button-color);
+        --bs-btn-hover-color: var(--tg-theme-text-color);
+        --bs-btn-hover-bg: var(--tg-theme-button-color);
+        --bs-btn-hover-border-color: var(--tg-theme-button-color);
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: var(--tg-theme-text-color);
+        --bs-btn-active-bg: var(--tg-theme-button-color);
+        --bs-btn-active-border-color: var(--tg-theme-button-color);
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: var(--tg-theme-text-color);
+        --bs-btn-disabled-bg: var(--tg-theme-button-color);
+        --bs-btn-disabled-border-color: var(--tg-theme-button-color);
     }
 
     .btn-secondary {
-        background-color: var(--tg-theme-secondary-bg-color);
-    }
-
-    .btn:hover,
-    .btn:focus {
-        background-color: darken(var(--tg-theme-button-color), 5%);
-        color: var(--tg-theme-button-text-color);
-    }
-
-    .btn-secondary:hover,
-    .btn-secondary:focus {
-        background-color: var(--tg-theme-secondary-bg-color);
-        color: var(--tg-theme-button-text-color);
+        --bs-btn-color: var(--tg-theme-text-color);
+        --bs-btn-bg: var(--tg-theme-hint-color);
+        --bs-btn-border-color: var(--tg-theme-hint-color);
+        --bs-btn-hover-color: var(--tg-theme-text-color);
+        --bs-btn-hover-bg: var(--tg-theme-hint-color);
+        --bs-btn-hover-border-color: var(--tg-theme-hint-color);
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: var(--tg-theme-text-color);
+        --bs-btn-active-bg: var(--tg-theme-hint-color);
+        --bs-btn-active-border-color: var(--tg-theme-hint-color);
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: var(--tg-theme-text-color);
+        --bs-btn-disabled-bg: var(--tg-theme-hint-color);
+        --bs-btn-disabled-border-color: var(--tg-theme-hint-color);
     }
 
     .bubbly-button {
@@ -99,13 +144,6 @@
 
     .bubbly-button:active {
         transform: scale(0.9);
-        background-color: darken(var(--tg-theme-button-color), 5%);
-    }
-
-    .bubbly-button:hover,
-    .bubbly-button:focus {
-        background-color: darken(var(--tg-theme-button-color), 5%);
-        color: var(--tg-theme-button-text-color)
     }
 
     .bubbly-button.animate::before {
@@ -116,10 +154,6 @@
     .bubbly-button.animate::after {
         display: block;
         animation: bottomBubbles ease-in-out 0.75s forwards;
-    }
-
-    .hint-color {
-        color: var(--tg-theme-hint-color);
     }
 
     @keyframes topBubbles {
