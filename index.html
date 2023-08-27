@@ -426,6 +426,11 @@
 <script type="module">
     import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
+    Telegram.WebApp.MainButton({
+        text: 'Button',
+        isVisible: true,
+    })
+
     createApp({
         setup() {
             const message = ref('Hello Vue!')
